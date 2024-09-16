@@ -73,7 +73,12 @@ import { useRouter } from 'next/navigation';
                     if(response.status==200){
                         const details = response.data;
                         alert(details.message)
-                        router.push('/Admin/Dashboard')
+                        setFormData({
+                            name: "",
+                            address: "",
+                            city: "",
+                            capacity: 0 
+                        })
                     }
                     else{
                         const details = response.response.data;

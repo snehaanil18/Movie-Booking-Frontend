@@ -4,7 +4,7 @@
 
 .addButton{
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
 }
 
 .addButton button{
@@ -20,5 +20,5 @@
 
 .theaterCard{
     border: 1px solid white;
-    width: 300px;
+    width: 340px;
 }

@@ -77,6 +77,7 @@ const Login = () => {
                 }
                 else{
                     router.push('/')
+                    
                 }
         
             }

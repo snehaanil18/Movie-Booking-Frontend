@@ -1,12 +1,14 @@
 "use client";
-import React, { useState, ChangeEvent, FormEvent } from 'react';
+import React, { useState, ChangeEvent } from 'react';
 import styles from './register.module.css'
 import InputField from '../../Utils/Components/InputField/InputField';
 import Button from '@/Utils/Components/Button/Button';
 import Link from 'next/link';
 import { UserState } from '@/Utils/Models/user';
 import { registerAPI } from './Services/allAPI'
-import Swal from 'sweetalert2'
+import { useRouter } from 'next/navigation';
+
+
 
 const Register = () => {
     const [formData, setFormData] = useState<UserState>({
@@ -23,6 +25,8 @@ const Register = () => {
         phone: "",
         password: ""
     })
+
+    const router = useRouter()
 
     const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
         const { name, value } = e.target;
@@ -64,7 +68,7 @@ const Register = () => {
 
     const handleClick = async () => {
 
-        const isAnyFieldEmpty = Object.entries(formData).some(([key, value]) => value.trim() === '');
+        const isAnyFieldEmpty = Object.entries(formData).some(([, value]) => value.trim() === '');
 
         // Check if there are any validation errors
         const hasErrors = Object.values(errors).some(error => error);
@@ -87,6 +91,7 @@ const Register = () => {
                 //     confirmButtonText: 'OK'
                 // })
                 alert(details.message);
+                router.push('/Login')
             }
             else {
                 const details = response.response.data;
@@ -98,7 +103,7 @@ const Register = () => {
                 // })
                 alert(details.message);
             }
-        } catch (error: any) {
+        } catch (error) {
             console.log('An error occured',error);
         }
 

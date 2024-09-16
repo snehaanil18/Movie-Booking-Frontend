@@ -6,7 +6,7 @@ import InputField from '@/Utils/Components/InputField/InputField';
 import Button from '@/Utils/Components/Button/Button';
 import Textarea from '@/Utils/Components/Textarea';
 import { addMovieAPI } from '../Services/allAPIs.mjs'
-import { useRouter } from 'next/navigation';
+// import { useRouter } from 'next/navigation';
 
 function Movie() {
     const [movieData, setMovieData] = useState<MovieData>({
@@ -24,7 +24,7 @@ function Movie() {
 
     const [errors, setErrors] = useState<{ [key: string]: string }>({});
 
-    const router = useRouter()
+    // const router = useRouter()
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
@@ -221,10 +221,32 @@ function Movie() {
         try {
             const result = await addMovieAPI(formData);
             console.log(result);
+            
+            if(result.status==200){
+                const details = result.data;
+                alert(details.message)
+                setMovieData({
+                    title: "",
+                    genre: "",
+                    releaseDate: "",
+                    duration: 0,
+                    director: "",
+                    cast: [""],
+                    synopsis: "",
+                    language: "",
+                    rating: 0,
+                    posterImage: null,
+                }
+                )
+            }
+            else{
+                const details = result.response.data;
+                alert(details.message)
+                
+            }
 
         } catch (err) {
             console.error(err);
-            router.push('/Login');
         }
     };
 
