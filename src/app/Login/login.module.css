@@ -1,0 +1,49 @@
+.container{
+    margin: 60px auto;
+    width: 400px;
+    border: 1px solid white;
+    padding: 20px;
+    color: rgb(255, 255, 255);
+}
+
+.container a{
+    color: white;
+}
+
+.formContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.divider{
+    width: 100%;
+    background-color: white;
+    height: 3px;
+}
+
+.formContent label{
+    font-size: 20px;
+}
+
+.formContent input{
+    padding: 10px;
+    background-color: rgb(75, 72, 72);
+    width: 300px;
+    color: white;
+}
+
+.formContent button{
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+}
+
+.error{
+    text-align: left;
+    color: red;
+    font-size: 14px;
+    font-weight: bolder;
+}

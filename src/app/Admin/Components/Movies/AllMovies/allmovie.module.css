@@ -1,0 +1,23 @@
+.allMovies{
+    padding: 20px;
+}
+
+.addButton{
+    display: flex;
+    justify-content: end;
+}
+
+.addButton button{
+    background-color: #00bfa6;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.movieCard{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    gap: 10px;
+}

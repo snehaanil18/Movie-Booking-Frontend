@@ -1,0 +1,43 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    padding:20px 30px;
+    width: 800px;
+    gap: 10px;
+    cursor: grab;
+}
+
+
+.container select{
+    padding: 10px;
+    width: 100%;
+    background-color: rgb(75, 72, 72);
+    border-radius: 7px;
+    color: white;
+}
+
+.container button{
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #33d4bf;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    width: 130px;
+}
+
+.error{
+    text-align: left;
+    color: red;
+    font-size: 14px;
+    font-weight: bolder;
+}
+
+.container input{
+    padding: 10px 0;
+    
+    width: 100%;
+    color: white;
+    border-radius: 7px;
+    background-color: rgb(75, 72, 72);   
+}

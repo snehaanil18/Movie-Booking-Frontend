@@ -1,0 +1,33 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    background-color:  #121212;
+    height: 70px;
+}
+
+.logo{
+    font-weight: bolder;
+    font-size: 24px;
+    text-align: center;
+    margin: 20px 40px;
+}
+
+.navElements{
+    margin: 0 40px;
+}
+
+.navElements ul{
+    list-style: none;
+    display: flex;
+    background-color:  #121212;
+    gap: 60px;
+    margin: 20px;
+}
+
+
+.navElements ul button{
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+}
+
