@@ -1,0 +1,71 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    
+}
+
+.details{ 
+    margin: 30px 0;
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.details h2{
+    text-align: center;
+}
+
+.content{
+
+    font-size: 20px;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cast{
+    margin: 10px 0;
+}
+
+.cast ul{ 
+    margin: 10px;
+    list-style-type: none;
+    display: flex;
+    gap: 30px;
+}
+
+.shows{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin: 0 25px;
+}
+
+.shows a{
+    color: white;
+    text-decoration: none;
+}
+
+.showCard{
+    width: 300px;
+    border: 1px solid rgb(133, 130, 130);
+    height: 150px;
+}
+
+@media screen and (min-width: 300px) and (max-width:900px){
+    .container{
+        flex-direction: column;
+    }
+    .content{
+        padding: 20px 30px;
+    }
+    .shows{
+        gap: 10px;
+    }
+}

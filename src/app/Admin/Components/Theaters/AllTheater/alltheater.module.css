@@ -1,0 +1,24 @@
+.allTheater{
+    padding: 20px 30px;
+}
+
+.addButton{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.addButton button{
+    background-color: #00bfa6;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    flex-wrap:wrap ;
+}
+
+.theaterCard{
+    border: 1px solid white;
+    width: 340px;
+}

@@ -1,0 +1,144 @@
+/* .bannerContainer {
+    position: relative;
+    width: 100%;
+    height: 500px; 
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    
+    width: 100%;
+    height: 500px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out, left 1s ease-in-out;
+}
+
+.active {
+    left: 0;
+    opacity: 1;
+}
+
+.bannerImage {
+    object-fit: cover;
+}
+
+.indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: lightgray;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.activeDot {
+    background-color: white;
+}
+
+@media screen and (min-width: 300px) and (max-width:900px){
+    .bannerContainer{
+        height: 230px;
+    }
+    .slide{
+        height: 220px;
+        width: 100%;
+    }
+    .bannerImage{
+        object-fit:contain;
+        width: fit-content;
+    }
+    .indicators{
+        justify-content: center;
+        align-items: center;
+    }
+} */
+
+
+.bannerContainer {
+    position: relative;
+    width: 100%;
+    height: 500px; /* Default height, will adjust for smaller screens */
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%; /* Ensure slides fit the container */
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.active {
+    opacity: 1;
+}
+
+.bannerImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the container */
+}
+
+.indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: lightgray;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.activeDot {
+    background-color: white;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 900px) {
+    .bannerContainer {
+        height: 300px; /* Adjust height for smaller screens */
+    }
+
+    .slide {
+        height: 300px; /* Ensure slides fit the adjusted container height */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .bannerContainer {
+        height: 200px; /* Further adjust height for very small screens */
+    }
+
+    .slide {
+        height: 200px; /* Ensure slides fit the further adjusted container height */
+    }
+
+    .indicators {
+        bottom: 10px; /* Adjust position for smaller screens */
+    }
+
+    .dot {
+        width: 8px; /* Smaller dots for smaller screens */
+        height: 8px;
+    }
+}

@@ -1,0 +1,16 @@
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.popular h2{
+    text-align: center;
+    margin: 20px;
+}
+
+.container a{
+    color: white;
+    text-decoration: none;
+}

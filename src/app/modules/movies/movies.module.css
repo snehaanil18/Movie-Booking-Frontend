@@ -1,0 +1,32 @@
+.search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+}
+
+.searchField{
+    width: 600px;
+    background-color: rgb(75, 72, 72);
+    outline: none;
+    color: white;
+}
+
+.container{
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.container a{
+    color: white;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 300px) and (max-width:900px){
+    .searchField{
+        width: 280px;
+    }
+}

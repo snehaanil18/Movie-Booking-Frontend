@@ -1,0 +1,81 @@
+.container{
+    width: 700px;
+    margin: 60px auto;
+    padding:20px 30px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.fieldName{
+    margin: 10px 0;
+} 
+
+.book button{
+    padding: 10px;
+    margin-top: 15px;
+    background-color: #33d4bf;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    width: 100px;
+}
+
+.container input{
+    padding: 10px;
+    width: 100%;
+    color: white;
+    border-radius: 7px;
+    background-color: rgb(75, 72, 72);   
+}
+
+.seatContainer {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.seatButton {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    background-color: lightgray;
+    border: 1px solid #000;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+}
+
+.selected {
+    background-color: green;
+    color: white;
+}
+
+.error{
+    text-align: left;
+    color: red;
+    font-size: 20px;
+    font-weight: bolder;
+    margin-top: 20px;
+}
+
+@media screen and (min-width: 300px) and (max-width:900px){
+    .container{
+        flex-direction: column;
+        width:auto;
+        
+        margin: 10px;
+        padding: 0 20px;
+    }
+
+    .container input{
+        width:max-content;
+        
+    }
+
+    .seatContainer{
+        width:auto;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+}

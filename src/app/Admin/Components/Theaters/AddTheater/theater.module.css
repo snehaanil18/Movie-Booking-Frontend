@@ -1,0 +1,35 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    padding:20px 30px;
+    width: 800px;
+    gap: 10px;
+    cursor: grab;
+}
+
+.fieldName{
+    margin: 10px 0;
+}
+
+.container input, .container textarea{
+    padding: 10px;
+    width: 100%;
+    color: white;
+    background-color: rgb(75, 72, 72);   
+}
+
+.container button{
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #33d4bf;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    width: 130px;
+}
+
+.error{
+    color: red;
+    font-weight: bolder;
+    font-size: 14px;
+}
